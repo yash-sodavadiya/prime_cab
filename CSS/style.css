@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Piazzolla:ital,wght@0,200;0,300;0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto sans";
+
+}
+:root {
+    --main-bg: #000;
+    --main-color: #FF0000;
+}
+
+body{
+    font-size:20px;    
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* navbar  */
+/* header-top  */
+.header-top{
+    width: 100%;
+    min-height: 50px;
+    background-color: red;
+}
+
+.logo-img{
+    height: 30px;
+    width: 30px;
+}
+
+/* top-header-left  */
+.header-top-left{
+    width: 70%;
+    min-height: 50px;
+    float: left;   
+}
+.header-top-left ul {
+    padding: 9px 0px 0px 17px;
+}
+.header-top-left ul li {
+    float: left;
+    border: 2px solid #fff;
+    min-width: 34px;
+    min-height: 34px;
+    margin-left:10px ;
+}
+.header-top-left ul li:hover{
+    background-color: var(--main-bg);
+    border: 2px solid black;
+} 
+.header-top-left ul li a{
+    padding: 9px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.header-top-left ul .btn-booking{
+    float: right;
+}
+
+/* top-header-right */
+.header-top-right{
+    width: 30%;
+    float: left;
+    height: 50px;
+}
+
+.header-top-right .btn-booking{
+    height: 50px;
+    float: right;
+    margin-right: 60px;
+    width: 152px;
+    border-radius: none;
+    border: 1px solid black;
+    border-radius: 0px;
+    font-size: 17px;
+}
+
+
+
+/* header bottom */
+
+.navbar-container{
+    display: block;
+    box-shadow: 0px 1px 14px -6px #000;
+    height: 76px;
+    padding-top: 8px;
+    background-color: #fff;
+}
+
+@media (max-width: 988px){
+    .navbar-container{
+        resize: both;
+    }
+}
+.navbar-container .my-nav{
+    width:99%;
+    margin-left: 7px;
+    box-shadow: 0px 1px 14px -6px #000;
+    margin-top: 0px;
+    background: rgba(0, 0, 0, 0.1);
+
+}
+
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translatex(-300px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.logo{
+    margin-left: 45px;
+    padding: 0px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #Fff;
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.logo:hover{
+    color: #000;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after{
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    width: 100%; 
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: red;
+}
+.navbar-light .navbar-nav .nav-link.active{
+    color: var(--main-color);
+    
+}
+
+
+.navbar-light .navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FF0000;
+    transition: width .3s;
+}
+.navbar-light .navbar-nav .nav-link{
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    margin-left: 12px;
+}
+
+
+.navbar .container-fluid .cust-brand{
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+
+.navbar ul li a{
+    font-size: 16px;
+    padding-top: 11px;
+}
+.fixed-top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.btn-register{
+    margin-left: 10px;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    font-size: 14px;
+}
+.btn-register:hover{
+    background-color: #FF0000;
+    border:1px solid #FF0000;
+}
+
+.btn-login{
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    font-size: 14px;
+}
+.btn-login:hover{
+    background-color: red;
+    border:1px solid #FF0000;
+}
+
+li{
+    list-style: none;
+}
+
+/* footer 
+ */
+ footer{
+    min-height: 340px;
+    width: 100%;
+    background-color: black;
+    margin-top: auto;
+ }
+
+ .footer-logo{
+    margin-top: 50px;
+ }
+
+ .footer-text{
+    margin-left: 45px;
+    padding: 0px;
+    font-size: 35px;
+    font-weight: 500;
+    color: #Fff;
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+ }
+
+ .footer-des{
+    color: #fff;
+    margin-left: 40px;
+    margin-top: 7px;
+    font-size: 12px;
+    text-align: justify;
+    opacity: 0.7;
+ }
+ .footer-1{
+    margin-left: 38px;
+ }
+
+ .footer-1 h5{
+    color: #fff;
+    margin-left: 40px;
+    margin-top: 15px;
+    font-size: 15px;
+    text-align: justify;
+    font-weight: 700;
+ } 
+
+ .footer-icon{
+    margin: 15px 0 0 40px;
+ }
+ .footer-icon .rot{
+    height: 30px;
+    padding: 7px;
+    background: dimgrey;
+    transition: all 1s;
+ }
+
+ .footer-icon .rot:hover{
+    background-color: red;
+    transform:rotate(360deg);
+ }
+
+
+/* footer left 2  */
+.footer-text-2{
+    margin-left: 45px;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #Fff;
+    text-decoration: none;
+    padding-top: 10px;
+}
+.footer-link{
+    margin-left: 12px;
+}
+.footer-link a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    opacity: .7;
+    margin-left: 4px;
+}
+
+.footer-link a:hover{
+    color: red;
+    opacity: 1;
+}
+
+
+/* footer center  */
+.contact-details p{
+    color: #fff;
+    margin-left: 45px;
+    margin-top: 10px;
+    font-size: 12px;
+    display: inline;
+}
+
+.contact-details img{
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    border-radius: 7px;
+}
+
+.contact-des{
+    display: flex;
+    flex-direction: row;
+    margin-left: 45px;
+    padding-bottom: 10px;
+}
+
+.contact-details .contact-des .contact{
+    margin: 0;
+    padding: 0 0 0 6px;
+}
+
+/* footer right  */
+
+.news-detail{
+    margin-top: 45px;
+}
+
+.news-detail input{
+    margin-left: 45px;
+    height: 30px;
+    width: 240px;
+    background: dimgrey;
+    border: none;
+    border-radius: 0px;
+}
+
+.news-detail input::placeholder{
+    color: #fff;
+}
+
+.news-detail input:focus{
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.btn-subscribe{
+    COLOR: #FFF;
+    BACKGROUND: red;
+    margin: 10px 0 0 45px;
+    width: 237px;
+    border: none;
+    border-radius: 0px;
+    font-size: 13px;
+    box-shadow: inset 0 0 0 0 #fff;
+  transition: ease-out 0.4s;
+  font-weight: 900;
+}
+
+.btn-subscribe:hover{
+    box-shadow: inset 400px 0 0 0 #fff;
+    color: #000;
+}
+
+.btn-subscribe:focus{
+    box-shadow: none;
+}
+
+
+
+
+
+

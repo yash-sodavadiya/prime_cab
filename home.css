@@ -1,0 +1,370 @@
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadein {
+   0% { opacity: 0; }
+   100% { opacity: 1; }
+ }
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto sans";
+}
+
+
+
+
+/* top banner css */
+.image{
+    max-height:582px;
+     /* width: 500px; */
+     animation: fadein 2s; 
+     /* filter:blur(3px); */
+     filter: brightness(60%);
+  
+   }
+
+.line2{
+    margin: 0 0 24px 268px;
+    border: 4px solid red;
+    border-radius: 20px;
+    width: 90px;
+}
+ 
+.banner-title{
+    letter-spacing: 5px;
+    font-size: 80px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 8px;
+  
+    font-family: 'Teko', sans-serif;
+ 
+  }
+  .banner-h1{
+    animation: fadeIn 0.3s ease-in both;
+    animation-delay: 0.5s;
+  }
+ .banner-text{
+    font-size: medium;
+    animation: fadeIn 0.3s ease-in both;
+    animation-delay: 0.5s;
+    margin-bottom: 25px;
+ }
+ .banner-btn{
+    color: whitered;
+     background: red;
+     border: none;
+     border-radius: 30px;
+     height: 50px;
+     cursor: pointer;
+     padding-top: 8px;
+     width: 165px;
+     font-size: 20px;
+     animation: fadeIn 0.3s ease-in both;
+     animation-delay: 0.5s;
+ }
+ .banner-btn:hover{
+    background-color: black;
+ }
+
+ .container1 {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+ .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+/* search car css  */
+.search-title{
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+.search-section{
+    background: black;
+    min-height: 290px;
+}
+
+.search-section .search-main-row{
+    padding-top: 16px;
+}
+
+.search-control{
+    height: 25px;
+    font-size: 12px;
+    border: 2px solid red;
+}
+
+.search-control:focus {
+    border-bottom: 2px solid red;
+    border-top:none ;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    box-shadow: none;
+}
+.first-row{
+    width: 82%;
+}
+
+.select-date{
+    height: 26px;
+    margin-top: 4px;
+}
+
+.select-time-date{
+    width: 95px;
+}
+
+.form-label{
+    font-size: 14px;
+    color: #fff;
+}
+
+.search-btn{
+    width: 116px;
+    padding: 3px;
+    background: red;
+    border: none;
+    border-radius: 0px;
+    border: 2px solid red;
+}
+.search-btn:hover{
+    background-color: black;
+    border: 2px solid red;
+}
+
+@media (max-width: 567px){
+    .search-control{
+        width: 100%;
+    }
+}
+
+/* catagory  */
+.catagory-title{
+    margin: auto;
+   
+}
+
+.catagory-title h1{
+    padding: 50px 0px 0px 0;
+}
+.catagory-title h1 .title-span{
+    color: red;
+}
+
+.catagory-title .line{
+    border: 2px solid red;
+    width: 90px;
+    margin-left: 28px;
+    margin-bottom: 0 0 20px 0;
+}
+
+.catagory-main{
+    margin-top: 25px;
+    box-shadow: 0px 1px 25px -6px #000000;
+    background-color: whitesmoke;
+    min-height: 610px;
+    display: block;
+    margin-bottom: 20px;
+}
+.catagory-title p {
+    font-size: 15px;
+    margin-top: 15px;
+    color: grey;
+}
+
+.catagory{
+    position: relative;
+text-align: center;
+color: white;
+}
+
+.catagory-auto{
+    height: 200px;
+    width: 108%;
+   
+}
+.catagory-img:hover{
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    box-shadow: 0px 1px 25px -4px red;
+}
+.catagory-img{
+    filter: brightness(70%);
+}
+.catagory-right{
+    width: 100%;
+    height: 409px;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+}
+
+.our-service-card{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* card  */
+.car-card{
+    /* min-height: 500px; */
+    margin-top: 70px;
+    background-color: whitesmoke;
+    padding-bottom: 25px;
+}
+.card-head{
+    text-align: center;
+}
+
+.card-head p{
+    color: red;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.card-head h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card-head .car-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card-head .car-menu ul li{
+    padding: 10px;
+}
+
+.card-head .car-menu ul input{
+    color: #000;
+    font-size: 15px;
+    text-decoration: none;
+    border: none;
+}
+
+.card-head .car-menu ul input.active{
+    color: red;
+}
+
+.car-card .car-card-1 {
+    /* width: 20vw; */
+    background-color: #fff;
+    padding-bottom: 15px;
+    /* min-height: 300px; */
+}
+
+.car-card-1 img{
+    width: 98%;
+}
+
+.car-card-1 .car-title{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.car-card-1 .car-title h4{
+    font-weight: bold;
+    font-size: 20px;
+}
+.car-card-1 .car-title p{
+    font-size: 12px;
+    color: grey;
+}
+
+.main-card-content .icon img{
+    height: 16px;
+    width: 20%;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+.main-card-content{
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.car-card .col-sm-3{
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 27px;
+    padding-bottom: 20px;
+}
+.car-card .col-sm-3:hover{
+    box-shadow: 1px 6px 24px -7px black;
+    width: 27%;
+    height: 589px;
+}
+
+.car-img{
+    display: flex;
+    justify-content: center;
+    min-height: 250px;
+}
+
+.main-card-content .car-detail{
+    width: 60%;
+    font-size: 12px;
+    float: left;
+    
+}
+
+.main-card-content .car-cap{
+    float: right;
+    font-size: 12px;
+    width: 12% !important;
+}
+.main-card-content .car-cap p{
+    float: right;
+}
+
+.car-card-1 .book-btn button{
+    margin: 0px ;
+    width: 35% ;
+    box-shadow: inset 0 0 0 0 #000 ;
+    margin-top: 7px ;
+}
+
+.car-card-1 .book-btn button:hover{
+    box-shadow: inset 400px 0 0 0 #000 !important;
+    color: #fff !important;
+}
+.view-btn input.view-button{
+    background: black ;
+    color: #fff;
+    float: right;
+    text-align: center;
+    width: 35%;
+    font-size: 13px;
+    border: 2px solid red;
+    padding: 0px;
+    border-radius: 0px;
+    margin-top: 7px;
+    font-weight: 700;
+    height: 30px;
+
+}
+
+

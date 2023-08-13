@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Piazzolla:ital,wght@0,200;0,300;0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto sans";
+
+}
+
+
+/* main content */
+
+.main-content{
+    margin-top: 100px;
+    padding-bottom: 100px ;
+}
+
+.img-1{
+    width: 70%;
+}
+
+.img-2{
+    position: absolute;
+    left: 395px;
+    z-index: 20;
+    margin-top: 37px;
+    border: 5px solid #fff;
+    width: 16%;
+    box-shadow: 0px 1px 25px -6px #000000;
+}
+
+.left-bottom{
+    width: 16%;
+    height: 115px;
+    box-shadow: 0px 1px 25px -6px #000000;
+    background-color: #fff;
+    position: absolute;
+    left: 395px;
+    border: 5px solid #fff;
+    margin-top: -135px;
+    text-align: center;
+}
+
+.left-bottom h3{
+    font-size: 14px;
+    margin-top: 5px;
+    margin-top: 14px;
+    color: black;
+}
+
+.left-bottom p {
+    font-size: 40px;
+    color: red;
+}
+
+/* right content */
+
+.about-right p.about-title{
+    color: orangered;
+}
+
+.right-bottom{
+    width: 90%;
+    background: whitesmoke;
+    height: 115px;
+    padding: 15px;
+}
+
+.right-bottom img{
+    width: 30%;
+    float: left;
+    height: 86px;
+    border-radius: 5px;
+}
+.check-list{
+    width: 60%;
+    float: left;
+    background-color: whitesmoke;
+}
+.check-list li{
+    list-style: disc;
+    font-size: 12px;
+    color: #000;
+    padding-top: 9px;
+    color: red;
+}
