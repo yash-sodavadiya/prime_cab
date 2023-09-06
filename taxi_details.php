@@ -40,8 +40,7 @@
                 <h3><?php echo $row['taxi_name'] ?></h3>
             </div>
             <div class="description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni distinctio esse nulla ipsa voluptatibus
-                quisquam a pariatur minus similique eos.
+            <?php echo $row["taxi_description"] ?>
             </div>
             <div class="features">
                 <div class="row">
@@ -50,7 +49,7 @@
                             <img src="images/card/card-passnger.svg" alt="">
                             <p class="car-text">CAR DOOR</p>
                             <div class="car-number">
-                                <p>4</p>
+                                <p><?php echo $row["car_door"] ?></p>
                             </div>
                         </div>
                     </div>
@@ -67,14 +66,14 @@
                         <div class="feature">
                             <img src="images/card/card-passnger.svg" alt="">
                             <p class="car-text">LUGGAGE</p>
-                            <p class="car-number"><?php echo $row["luggage's"] ?></p>
+                            <p class="car-number"><?php echo $row["luggage"] ?></p>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="feature">
                             <img src="images/card/card-passnger.svg" alt="">
                             <p class="car-text">HEATED SEAT</p>
-                            <p class="car-number">4</p>
+                            <p class="car-number"><?php echo $row["heated_seat"] ?></p>
                         </div>
                     </div>
                 </div>

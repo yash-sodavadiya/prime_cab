@@ -228,7 +228,7 @@
                             <option value="">Morning</option>
                         </select>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-2" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
                         <label for="" class="form-label" style="color: black; font-size: 16px;">hello</label>
                         <button class="btn btn-primary search-control search-btn" type="submit">Search</button>
                     </div>

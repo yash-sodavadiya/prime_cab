@@ -29,7 +29,7 @@
                                 <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Cars</a>
+                                <a class="nav-link" href="taxi.php">Taxi</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Blog</a>

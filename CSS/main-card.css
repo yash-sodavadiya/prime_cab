@@ -1,0 +1,140 @@
+/* card  */
+.car-card{
+    
+    margin-top: 70px;
+    background-color: whitesmoke;
+    padding-bottom: 25px;
+}
+.card-head{
+    text-align: center;
+}
+
+.card-head p{
+    color: red;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.card-head h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card-head .car-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card-head .car-menu ul li{
+    padding: 10px;
+}
+
+.card-head .car-menu ul input{
+    color: #000;
+    font-size: 15px;
+    text-decoration: none;
+    border: none;
+}
+
+.card-head .car-menu ul input.active{
+    color: red;
+}
+
+.car-card .car-card-1 {
+
+    background-color: #fff;
+    padding-bottom: 15px;
+
+}
+
+.car-card-1 img{
+    width: 98%;
+}
+
+.car-card-1 .car-title{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.car-card-1 .car-title h4{
+    font-weight: bold;
+    font-size: 20px;
+}
+.car-card-1 .car-title p{
+    font-size: 12px;
+    color: grey;
+}
+
+.main-card-content .icon img{
+    height: 16px;
+    width: 20%;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+.main-card-content{
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.car-card .col-sm-3{
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 27px;
+    padding-bottom: 20px;
+}
+.car-card .col-sm-3:hover{
+    box-shadow: 1px 6px 24px -7px black ;
+    width: 27%;
+    height: 589px;
+}
+
+.car-img{
+    display: flex;
+    justify-content: center;
+    min-height: 250px;
+}
+
+.main-card-content .car-detail{
+    width: 60%;
+    font-size: 12px;
+    float: left;
+    
+}
+
+.main-card-content .car-cap{
+    float: right;
+    font-size: 12px;
+    width: 12% !important;
+}
+.main-card-content .car-cap p{
+    float: right;
+}
+
+.car-card-1 .book-btn button{
+    margin: 0px ;
+    width: 35% ;
+    box-shadow: inset 0 0 0 0 #000 ;
+    margin-top: 7px ;
+}
+
+.car-card-1 .book-btn button:hover{
+    box-shadow: inset 400px 0 0 0 #000 !important;
+    color: #fff !important;
+}
+.view-btn input.view-button{
+    background: black ;
+    color: #fff;
+    float: right;
+    text-align: center;
+    width: 35%;
+    font-size: 13px;
+    border: 2px solid red;
+    padding: 0px;
+    border-radius: 0px;
+    margin-top: 7px;
+    font-weight: 700;
+    height: 30px;
+
+}
+

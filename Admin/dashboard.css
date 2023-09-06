@@ -1,0 +1,56 @@
+
+.right-side .row .circle-box{
+    display: flex;
+    justify-content: center;
+    background: white;
+    height: 235px;
+    width: 20%;
+    padding-top: 15px;
+    box-shadow: -1px 1px 23px -7px black;
+    border-radius: 32px;
+}
+.right-side .main-box{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid grey;
+    padding: 25px;
+}
+.right-side .dashboard-top{
+    padding: 30px;
+    background: whitesmoke;
+    width: 94%;
+    display: flex;
+}
+.right-side .dashboard-top .left{
+    width: 30%;
+    display: flex;
+    float: left;
+}
+.right-side .dashboard-top .left h1{
+    font-size: 35px;
+    font-weight: 500;
+}
+.right-side .dashboard-top .right{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.right-side .dashboard-top .right .home a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.right-side .dashboard-top .right .home:hover{
+    color: #fff;
+}
+.right-side .dashboard-top .right span{
+    padding-left: 13px;
+}
+.right-side .main-box .circle-box h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    font-size: 33px;
+}
