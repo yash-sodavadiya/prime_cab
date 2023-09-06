@@ -186,8 +186,17 @@ body{
 .btn-register:hover{
     background-color: #FF0000;
     border:1px solid #FF0000;
+    box-shadow: none;
 }
-
+.btn-register:focus{
+    box-shadow: none;
+}
+.btn-register:focus-visible{
+    box-shadow: none;
+}
+.btn-register:focus-within{
+    box-shadow: none;
+}
 .btn-login{
     color: var(--main-color);
     border: 1px solid var(--main-color);
@@ -196,6 +205,16 @@ body{
 .btn-login:hover{
     background-color: red;
     border:1px solid #FF0000;
+    box-shadow: none;
+}
+.btn-login:focus{
+    box-shadow: none;
+}
+.btn-login:focus-visible{
+    box-shadow: none;
+}
+.btn-login:focus-within{
+    box-shadow: none;
 }
 
 li{

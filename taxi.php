@@ -93,7 +93,7 @@
 
                 </div>
             </div>
-
+                    </div>
             <!-- footer  -->
             <?php require("components/footer.php") ?>
             <script src="javascript/jquery.min.js"></script>
