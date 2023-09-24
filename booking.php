@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +9,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime Cab | booking</title>
-    <link rel="stylesheet" href="CSS/booking.css">
+    <link rel="stylesheet" href="booking.css">
     <?php include("components/header_link.php") ?>
+    
 
 </head>
 
-<body>
+<body style="background:red;">
 
     <!-- navbar -->
     <?php require("components/navbar.php") ?>
@@ -26,76 +31,88 @@
         <div class="book-left search-section" align="justify">
             <p>Your personal information</p>
 
-            <form action="">
+            <form action="php/booking.php" method="post">
                 <div class="row search-main-row">
                     <div class="col-sm-6">
                         <label for="" class="cust-label">First Name:</label>
-                        <input type="text" class="book-input form-control" placeholder="First Name">
+                        <input type="text" class="book-input form-control" name="pname" placeholder="First Name">
                     </div>
-                    <div class="col-sm-6">
-                        <label for="" class="cust-label">Last Name:</label>
-                        <input type="text" class="book-input form-control" placeholder="Last Name" />
-                    </div>
-                </div>
-                <div class="row search-main-row">
                     <div class="col-sm-6">
                         <label for="" class="cust-label">Email id:</label>
-                        <input type="email" class="book-input form-control" placeholder="Email Id">
-                    </div>
-                    <div class="col-sm-6">
-                        <label for="" class="cust-label">Verify Email id:</label>
-                        <input type="text" class="book-input form-control" placeholder="Verify Email Id" />
+                        <input type="email" class="book-input form-control" name="email" placeholder="Email Id">
                     </div>
                 </div>
+
                 <div class="row search-main-row">
                     <div class="col-sm-6">
-                        <label for="" class="cust-label">Country Code:</label>
-                        <input type="text" class="book-input form-control" placeholder="Email Id">
+                        <label for="" class="cust-label">City:</label>
+                        <input type="text" class="book-input form-control" name="city" placeholder="City">
                     </div>
                     <div class="col-sm-6">
                         <label for="" class="cust-label">Phone No:</label>
-                        <input type="number" class="book-input form-control" placeholder="Verify Email Id" />
+                        <input type="number" class="book-input form-control" name="phone" placeholder="Enter Phone number" />
                     </div>
                 </div>
 
                 <hr>
-                <p>Your Card Information</p>
+                <p >Your Trip Information</p>
 
                 <div class="row search-main-row">
                     <div class="col-sm-6">
-                        <label for="" class="cust-label">First Name:</label>
-                        <input type="text" class="book-input form-control" placeholder="First Name">
+                        <label for="" class="cust-label">Pick Up:</label>
+                        <input type="text" class="book-input form-control" name="pickup" placeholder="Enter Pick Up Loaction" />
                     </div>
                     <div class="col-sm-6">
-                        <label for="" class="cust-label">Last Name:</label>
-                        <input type="text" class="book-input form-control" placeholder="Last Name" />
-                    </div>
-                </div>
-                <div class="row search-main-row">
-                    <div class="col-sm-6">
-                        <label for="" class="cust-label">Email id:</label>
-                        <input type="email" class="book-input form-control" placeholder="Email Id">
-                    </div>
-                    <div class="col-sm-6">
-                        <label for="" class="cust-label">Verify Email id:</label>
-                        <input type="text" class="book-input form-control" placeholder="Verify Email Id" />
+                        <label for="" class="cust-label">Drop:</label>
+                        <input type="text" class="book-input form-control" name="drop" placeholder="Enter Drop Location" />
                     </div>
                 </div>
+
                 <div class="row search-main-row">
+                    <?php
+                    if (isset($_POST['submit'])) {
+                        $price_km = $_POST['price_km'];
+                        ?>
+                        <div class="col-sm-6">
+                            <label for="" class="cust-label">Price Per km:</label>
+                            <input type="number" class="book-input form-control" name = "price_km" value="<?php echo $price_km; ?>"
+                                placeholder="price per km" disabled />
+                        </div>
+                    <?php } else { ?>
+                        <div class="col-sm-6">
+                            <label for="" class="cust-label">Price Per km:</label>
+                            <input type="number" class="book-input form-control" name="price_km" value="0" placeholder="price per km"
+                                disabled />
+                        </div>
+                    <?php } ?>
                     <div class="col-sm-6">
-                        <label for="" class="cust-label">Country Code:</label>
-                        <input type="text" class="book-input form-control" placeholder="Email Id">
+                        <label for="" class="cust-label">Total Price:</label>
+                        <input type="number" class="book-input form-control" name="tprice" placeholder="Total Price" disabled/>
                     </div>
-                    <div class="col-sm-6">
-                        <label for="" class="cust-label">Phone No:</label>
-                        <input type="number" class="book-input form-control" placeholder="Verify Email Id" />
+                </div>
+                
+                <hr>
+                <hr >
+                <p>Your Payment Information</p>
+
+                <div class="row search-main-row">
+                    <div class="col-sm-12">
+                        <label for="" class="cust-label" style="margin-right:10px;">Payment Type:</label>
+                        <select name="payment" id="" style="height: 23px; font-size: 12px; width: 78%; text-align: center;">
+                            <option value="Select">Select type</option>
+                            <option value="Cash">Cash</option>
+                            <option value="Debit Card">Debit Card</option>
+                            <option value="Creadit Card">Creadit Card</option>
+                            <option value="UPI">UPI</option>
+                            <option value="Net Banking">Net Banking</option>
+                        </select>        
                     </div>
                 </div>
                 <hr>
                 <div class="confirm">
                     <input type="checkbox"> <span class="confirm"> You want to confirm booking.</span>
                 </div>
-            </form>
+            
         </div>
 
         <div class="book-right" align="justify">
@@ -118,7 +135,7 @@
                             <img src="images/card/<?php echo $image; ?>" alt="not found">
                         </div>
                         <div class="car-title">
-                            <h4>
+                            <h4 style="color:red;">
                                 <?php echo $taxiname; ?>
                             </h4>
                             <p>$
@@ -171,19 +188,22 @@
                             </div>
                         </div>
                         <div class="book-btn">
-                            <button class="btn btn-subscribe">BOOK NOW</button>
+           
+                            <input type="hidden" value="<?php echo $taxiname; ?>" name="tname">
+                            <button class="btn btn-subscribe" type="submit" name="book">BOOK NOW</button>
+                            
                         </div>
                     </div>
                 </div>
-
+                </form>
 
             <?php } else { ?>
                 <?php require("query.php") ?>
-                <?php 
+                <?php
                 $result = mysqli_query($conn, $sql);
-                    foreach ($result as $row) { ?>
-                        <?php require("components/card.php") ?>
-                    <?php } ?>
+                foreach ($result as $row) { ?>
+                    <?php require("components/card.php") ?>
+                <?php } ?>
             <?php }
             ?>
         </div>
@@ -192,16 +212,16 @@
             <h3>Need Help?.</h3>
             <p>We would be more than happy to help you. Our team advisor are 24/7 at your service to help you.</p>
             <div class="contect">
-            <div class="contact-des">
-                <img src="images/footer/footer-phone.png" alt="">
-                <P class="contact"> +919824764583 </P>
+                <div class="contact-des">
+                    <img src="images/footer/footer-phone.png" alt="">
+                    <P class="contact"> +919824764583 </P>
+                </div>
+
+                <div class="contact-des">
+                    <img src="images/footer/footer-email.png" alt="">
+                    <P class="contact"> primecab@gmail.com </P>
+                </div>
             </div>
-                
-            <div class="contact-des">
-                            <img src="images/footer/footer-email.png" alt="">
-                            <P class="contact"> primecab@gmail.com </P>
-                        </div>
-                        </div>
         </div>
     </div>
 
