@@ -5,7 +5,7 @@
             <div class="right">
                 
             <i class="fa-solid fa-house-chimney-window" style="color: #000000;"></i>
-            <span class="home"> <a href="#"> Home </a></span>  <span> > </span> <span>Dashboard</span>
+            <span class="home"> <a href="Dashboard.php"> Home </a></span>  <span> > </span> <span>Book Trip</span>
             </div>
         </div>
 
@@ -32,7 +32,13 @@
             $sql = "SELECT * FROM tblbook";
             $result = mysqli_query($conn,$sql);
             foreach($result as $row)
-            {?>
+            {
+              $dis = "";
+              if($row['Status'] == "Active" || $row['Status'] == "Cancle")
+              {
+                $dis = "disabled";
+              }
+              ?>
                 
           <tr>
             <td><?php echo $row['Booking_id'] ?></td>
@@ -44,9 +50,9 @@
             <td><?php echo $row['Taxi_name'] ?></td>
             <td><?php echo $row['Price_km'] ?></td>
             <td><?php echo $row['Total_price'] ?></td>
-            <td><button class="<?php if($row['Status'] == "Active" || $row['Status'] == "active"){echo "Done";}else{echo "no";} ?>"><?php echo $row['Status'] ?></button></td>
-            <td><form action="php/done.php" method="post"><input type="hidden" name="bid" value="<?php echo $row['Booking_id']; ?>"><button type="submit" name="done" style="background:whitesmoke; border:none; cursor:pointer;"> <img src="../images/main-icons/done.png" alt=""></button></form></td>
-            <td><form action="php/done.php" method="post"><input type="hidden" name="bid" value="<?php echo $row['Booking_id']; ?>"><button type="submit" name="no" style="background:whitesmoke; border:none; cursor:pointer;"> <img src="../images/main-icons/no.png" alt=""></button></form></td>
+            <td><button class="<?php if($row['Status'] == "Active" || $row['Status'] == "active"){echo "Done";}elseif($row['Status'] == "Waiting" || $row['Status'] == "waiting"){echo "waiting";}else{echo "no";} ?>"><?php echo $row['Status'] ?></button></td>
+            <td><form action="php/done.php" method="post"><input type="hidden" name="bid" value="<?php echo $row['Booking_id']; ?>"><button type="submit" name="done" style="background:whitesmoke; border:none; cursor:pointer;" <?php echo $dis; ?> > <img src="../images/main-icons/done.png" alt=""></button></form></td>
+            <td><form action="php/done.php" method="post"><input type="hidden" name="bid" value="<?php echo $row['Booking_id']; ?>"><button type="submit" name="no" style="background:whitesmoke; border:none; cursor:pointer;" <?php echo $dis; ?> > <img src="../images/main-icons/no.png" alt=""></button></form></td>
 
           </tr>
            <?php }

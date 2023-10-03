@@ -10,19 +10,63 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime Cab | booking</title>
     <link rel="stylesheet" href="booking.css">
+    <style>
+        .result p{
+            font-size: 13px;
+    color: black;
+    border: 1px solid #3a3d40;
+    border-top: none;
+        }
+    </style>
     <?php include("components/header_link.php") ?>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script>
+$(document).ready(function()
+{
+    $('.search-box input[type="text"]').on("keyup input", function()
+	{
+        /* Get input value on change */
+        var inputVal = $(this).val();
+        var resultDropdown = $(this).siblings(".result");
+        if(inputVal.length)
+		{
+            $.get("backend-search.php", {term: inputVal}).done(function(data)
+			{
+                // Display the returned data in browser
+                resultDropdown.html(data);
+            });
+        } 
+		else
+		{
+            resultDropdown.empty();
+        }
+    });
     
+    // Set search input value on click of result item
+    $(document).on("click", ".result p", function()
+	{
+        $(this).parents(".search-box").find('input[type="text"]').val($(this).text());
+        $(this).parent(".result").empty();
+    });
+});
+</script>
+
+
 
 </head>
 
-<body style="background:red;">
+<body >
+
+<?php
+    if (isset($_SESSION["uname"])) { ?>
 
     <!-- navbar -->
     <?php require("components/navbar.php") ?>
     <!-- banner  -->
     <div class="container-fluid about-banner">
         <h1>Booking</h1>
-        <p><a href="index.html">Home</a> / <span> Booking </span></p>
+        <p><a href="index.php">Home</a> / <span> Booking </span></p>
     </div>
 
     <!-- main content  -->
@@ -35,22 +79,22 @@ session_start();
                 <div class="row search-main-row">
                     <div class="col-sm-6">
                         <label for="" class="cust-label">First Name:</label>
-                        <input type="text" class="book-input form-control" name="pname" placeholder="First Name">
+                        <input type="text" class="book-input form-control" name="pname" placeholder="First Name" required>
                     </div>
                     <div class="col-sm-6">
                         <label for="" class="cust-label">Email id:</label>
-                        <input type="email" class="book-input form-control" name="email" placeholder="Email Id">
+                        <input type="email" class="book-input form-control" name="email" placeholder="Email Id"  required>
                     </div>
                 </div>
 
                 <div class="row search-main-row">
                     <div class="col-sm-6">
                         <label for="" class="cust-label">City:</label>
-                        <input type="text" class="book-input form-control" name="city" placeholder="City">
+                        <input type="text" class="book-input form-control" name="city" placeholder="City"  required>
                     </div>
                     <div class="col-sm-6">
                         <label for="" class="cust-label">Phone No:</label>
-                        <input type="number" class="book-input form-control" name="phone" placeholder="Enter Phone number" />
+                        <input type="number" class="book-input form-control" name="phone" placeholder="Enter Phone number"  required/>
                     </div>
                 </div>
 
@@ -58,13 +102,15 @@ session_start();
                 <p >Your Trip Information</p>
 
                 <div class="row search-main-row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 search-box">
                         <label for="" class="cust-label">Pick Up:</label>
-                        <input type="text" class="book-input form-control" name="pickup" placeholder="Enter Pick Up Loaction" />
+                        <input type="text" class="book-input form-control" autocomplete="off" name="pickup"  required placeholder="Enter Pick Up Loaction" />
+                        <div class="result" style="width: 259px; margin-left: 15px;"></div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 search-box">
                         <label for="" class="cust-label">Drop:</label>
-                        <input type="text" class="book-input form-control" name="drop" placeholder="Enter Drop Location" />
+                        <input type="text" class="book-input form-control" autocomplete="off"  required name="drop" placeholder="Enter Drop Location" />
+                        <div class="result" style="width: 259px; margin-left: 15px;"></div>
                     </div>
                 </div>
 
@@ -75,20 +121,27 @@ session_start();
                         ?>
                         <div class="col-sm-6">
                             <label for="" class="cust-label">Price Per km:</label>
-                            <input type="number" class="book-input form-control" name = "price_km" value="<?php echo $price_km; ?>"
-                                placeholder="price per km" disabled />
+                            <input type="number" class="book-input form-control" name = "price_km"   value="<?php echo $price_km; ?>"
+                                placeholder="price per km" readonly/>
                         </div>
                     <?php } else { ?>
                         <div class="col-sm-6">
                             <label for="" class="cust-label">Price Per km:</label>
-                            <input type="number" class="book-input form-control" name="price_km" value="0" placeholder="price per km"
+                            <input type="number" class="book-input form-control" name="price_km"   value="0" placeholder="price per km"
                                 disabled />
                         </div>
                     <?php } ?>
-                    <div class="col-sm-6">
+                    <?php
+                    if (isset($_POST['submit'])) {
+                        $price_km = $_POST['price_km'];
+                        $total = $price_km * 6;
+                        ?>
+                    <div class="col-sm-6 search-box">
                         <label for="" class="cust-label">Total Price:</label>
-                        <input type="number" class="book-input form-control" name="tprice" placeholder="Total Price" disabled/>
+                        <input type="text" class="book-input form-control" name="tprice" value="<?php echo $total ;?>" readonly required placeholder="Total Price"/>
+                        
                     </div>
+                    <?php } ?>
                 </div>
                 
                 <hr>
@@ -97,7 +150,7 @@ session_start();
 
                 <div class="row search-main-row">
                     <div class="col-sm-12">
-                        <label for="" class="cust-label" style="margin-right:10px;">Payment Type:</label>
+                        <label for="" class="cust-label" style="margin-right:10px;"  required>Payment Type:</label>
                         <select name="payment" id="" style="height: 23px; font-size: 12px; width: 78%; text-align: center;">
                             <option value="Select">Select type</option>
                             <option value="Cash">Cash</option>
@@ -110,7 +163,7 @@ session_start();
                 </div>
                 <hr>
                 <div class="confirm">
-                    <input type="checkbox"> <span class="confirm"> You want to confirm booking.</span>
+                    <input type="checkbox"  required> <span class="confirm"> You want to confirm booking.</span>
                 </div>
             
         </div>
@@ -208,7 +261,7 @@ session_start();
             ?>
         </div>
 
-        <div class="help">
+        <!-- <div class="help">
             <h3>Need Help?.</h3>
             <p>We would be more than happy to help you. Our team advisor are 24/7 at your service to help you.</p>
             <div class="contect">
@@ -222,16 +275,27 @@ session_start();
                     <P class="contact"> primecab@gmail.com </P>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
 
     </div>
+    <?php require("components/footer.php"); ?>
+   <?php }
+    else{
+        header("Location:login.php");
+    }
+   ?>
 
 
 
-    <!-- footer  -->
-    <?php require("components/footer.php") ?>
+          <!-- footer  -->
+    
+   
+
+
+
+  
 
 
 

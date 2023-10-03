@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime Cab Admin | Add Vehicle</title>
     <link rel="stylesheet" href="cust_css/add_vehicle.css">
-    <link rel="stylesheet" href="cust_css/navbar.css">
+    <link rel="stylesheet" href="navbar.css">
 
 </head>
 <body>
@@ -27,9 +30,9 @@
 
             $sql = "INSERT INTO `tbltaxi` (`taxi_name`, `taxi_image`, `taxi_description`, `price_km`, `passanger`, `luggage`, `car_door`, `heated_seat`, `air_conditioner`, `base_rate`, `category`) values('$v_name','$imgpath','$v_desc','$price_km','$passanger','$luggage','$car_door','$heated_seat','$ac','$base_price','$catagory')";
             $result = mysqli_query($conn,$sql);
-            if(!$result)
+            if($result)
             {
-                echo "not insert";
+                echo '<script>alert("Taxi Inserted")</script>';
             }
         }
     ?>

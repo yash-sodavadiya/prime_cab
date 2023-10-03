@@ -24,7 +24,7 @@ session_start();
 
     <div class="container-fluid about-banner">
         <h1>About Us</h1>
-        <p><a href="index.html" >Home</a> / <span> About Us </span></p>
+        <p><a href="index.php" >Home</a> / <span> About Us </span></p>
     </div>
     <!-- main content  -->
     <div class="container main-content">

@@ -263,10 +263,10 @@ input {
 				<a href="#" ><i class="bi bi-linkedin"></i></a>
 			</div>
 			<span>or use your email for registration</span>
-			<input type="text" name="username" placeholder="Name" />
-			<input type="email" name="email" placeholder="Email" />
-			<input type="password" name="password" placeholder="Password" />
-			<input type="password" name="cpassword" placeholder="Confirm Password" />
+			<input type="text" name="username" placeholder="Name" required />
+			<input type="email" name="email" placeholder="Email" required/>
+			<input type="password" name="password" placeholder="Password" required/>
+			<input type="password" name="cpassword" placeholder="Confirm Password" required />
 			<button type="submit" name="submit">Sign Up</button>
 		</form>
 	</div>
@@ -281,8 +281,8 @@ input {
 				<a href="#" ><i class="bi bi-linkedin"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" name="email" placeholder="Email" />
-			<input type="password" name="password" placeholder="Password" />
+			<input type="email" name="email" placeholder="Email" required/>
+			<input type="password" name="password" placeholder="Password" required />
 			<a href="#">Forgot your password?</a>
 			<button type="submit">Sign In</button>
 		</form>

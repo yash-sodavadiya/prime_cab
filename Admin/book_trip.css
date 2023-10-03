@@ -50,14 +50,21 @@
     color: #fff;
     border: green;
     padding: 10px;
-    width: 70px;
+    width: 62px;
 }
 .no{
     background: red;
     color: #fff;
     border: red;
     padding: 10px;
-    width: 70px;
+    width: 62px;
+}
+.waiting{
+    background: darkorange;
+    color: #fff;
+    border: darkorange;
+    padding: 10px;
+    width: 62px;
 }
 button{
     background-color: whitesmoke;

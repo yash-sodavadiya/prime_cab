@@ -5,7 +5,7 @@
             <div class="right">
                 
             <i class="fa-solid fa-house-chimney-window" style="color: #000000;"></i>
-            <span class="home"> <a href="#"> Home </a></span>  <span> > </span> <span>Dashboard</span>
+            <span class="home"> <a href="Dashboard.php"> Home </a></span>  <span> > </span> <span>Cancle Trip</span>
             </div>
         </div>
 

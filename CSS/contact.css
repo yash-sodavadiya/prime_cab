@@ -1,0 +1,42 @@
+.btn-branch{
+    padding: 16px;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+}
+
+.btn-branch:hover{
+    font-weight: bold;
+    background-color: orange;
+    color: #fff;
+}
+
+.btn-active{
+        font-weight: bold;
+        background-color: orange;
+        color: #000;
+}
+
+.feedback-form input{
+    height: 48px;
+    width: 105%;
+    border: 1px solid orange;
+}
+
+.feedback-form .row{
+    margin: 0px;
+}
+
+select{
+    height: 48px;
+    width: 100%;
+    border: 1px solid orange;
+}
+
+textarea{
+    border: 1px solid orange;
+}
+
+.formcontrol:hover{
+    color: #fff;
+}

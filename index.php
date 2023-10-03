@@ -305,8 +305,8 @@ session_start();
         </div>
         <div class="row">
             <div class="col-sm-4 our-service-card">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/car-1.jpg" class="card-img-top" alt="...">
+                <div class="card" style="width: 18rem; height:446px">
+                    <img src="images/car-1.jpg" style="height:178px" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h3 class="card-title">Business Tranport</h3>
                         <p class="card-text">Business Tranport refer to the tranportaion service and metod used by
@@ -316,8 +316,8 @@ session_start();
                 </div>
             </div>
             <div class="col-sm-4 our-service-card">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/car-1.jpg" class="card-img-top" alt="...">
+                <div class="card" style="width: 18rem; height:446px">
+                    <img src="images/service_1.jpg" style="height:178px" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h3 class="card-title">Rapid City Tranport</h3>
                         <p class="card-text">Business Tranport refer to the tranportaion service and metod used by
@@ -327,8 +327,8 @@ session_start();
                 </div>
             </div>
             <div class="col-sm-4 our-service-card">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/car-1.jpg" class="card-img-top" alt="...">
+                <div class="card" style="width: 18rem; height:446px;">
+                    <img src="images/service_2.jpg" class="card-img-top" style="height:178px" alt="...">
                     <div class="card-body">
                         <h3 class="card-title">Rapid City Tranport</h3>
                         <p class="card-text">Business Tranport refer to the tranportaion service and metod used by

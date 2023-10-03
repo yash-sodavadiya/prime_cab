@@ -23,7 +23,7 @@ session_start();
 
         <div class="container-fluid about-banner">
             <h1>Taxi Details</h1>
-            <p><a href="index.html">Home</a> / <span> Taxi Details </span></p>
+            <p><a href="index.php">Home</a> / <span> Taxi Details </span></p>
         </div>
 
         <!-- deatils main container -->

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime Cab Admin | Edit Vehicle</title>
-    <link rel="stylesheet" href="cust_css/navbar.css">
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="cust_css/add_vehicle.css">
 </head>
 
@@ -31,6 +34,10 @@
         
                 $sql = "UPDATE `tbltaxi` SET `taxi_description` = '$v_desc' ,`taxi_name`= '$v_name',`price_km` = '$price_km',`passanger` = '$passanger',`luggage` = '$luggage',`car_door` = '$car_door',`heated_seat` = '$heated_seat',`air_conditioner` = '$ac',`base_rate` = '$base_price',`category` = '$catagory',`taxi_image` = '$imgpath'  where `taxi_id` = '$id' ";
                 $result = mysqli_query($conn,$sql);
+                if($result)
+                {
+                    echo '<script>alert("Taxi Updated")</script>';
+                }
             }
         ?>
 

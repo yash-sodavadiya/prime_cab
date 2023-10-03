@@ -37,24 +37,22 @@ session_start();
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                            <a class="nav-link <?php if( basename($_SERVER['PHP_SELF']) == 'index.php') { echo 'active'; } else{echo '';}  ?>" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="taxi.php">Taxi</a>
+                            <a class="nav-link <?php if( basename($_SERVER['PHP_SELF']) == 'taxi.php') { echo 'active'; } else{echo '';}  ?>" href="taxi.php">Taxi</a>
+                        </li>
+                
+                        <li class="nav-item">
+                            <a class="nav-link <?php if( basename($_SERVER['PHP_SELF']) == 'aboutus.php') { echo 'active'; } else{echo '';}  ?>" href="aboutus.php">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="aboutus.php">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link <?php if( basename($_SERVER['PHP_SELF']) == 'contact.php') { echo 'active'; } else{echo '';}  ?>" href="contact.php">Contact</a>
                         </li>
                         <?php
                         if (isset($_SESSION["uname"])) { ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="booking_list.php">Booking List</a>
+                                <a class="nav-link <?php if( basename($_SERVER['PHP_SELF']) == 'booking_list.php') { echo 'active'; } else{echo '';}  ?>" href="booking_list.php">Booking List</a>
                             </li>
                         <?php }
                         ?>

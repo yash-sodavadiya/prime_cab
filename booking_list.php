@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime Cab | My Booking</title>
-    <link rel="stylesheet" href="CSS/booking_list.css">
+    <link rel="stylesheet" href="booking_list.css">
     <?php require("components/header_link.php") ?>
 
 </head>
@@ -44,7 +44,7 @@
             <td><?php echo $row['Taxi_name'] ?></td>
             <td><?php echo $row['Price_km'] ?></td>
             <td><?php echo $row['Total_price'] ?></td>
-            <td><button class="<?php if($row['Status'] == "Active" || $row['Status'] == "active"){echo "Done";}else{echo "no";} ?>"><?php echo $row['Status'] ?></button></td>
+            <td><button class="<?php if($row['Status'] == "Active" || $row['Status'] == "active"){echo "Done";}elseif($row['Status'] == "Waiting" || $row['Status'] == "waiting"){echo "waiting";}else{echo "no";} ?>" style="width:100px"><?php echo $row['Status'] ?></button></td>
            
           </tr>
            <?php }

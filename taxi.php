@@ -61,7 +61,7 @@ session_start();
     <?php require("components/navbar.php") ?>
     <div class="container-fluid about-banner">
         <h1>Taxi</h1>
-        <p><a href="index.html">Home</a> / <span> Taxi </span></p>
+        <p><a href="index.php">Home</a> / <span> Taxi </span></p>
     </div>
 
     <!-- main content  -->

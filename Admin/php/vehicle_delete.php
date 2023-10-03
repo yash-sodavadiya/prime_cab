@@ -6,6 +6,7 @@
         $result = mysqli_query($conn, $sql);
         if($result)
         {
+            echo '<script>alert("Taxi Deleted")</script>';
             header("location:../view_vehicle.php");
         }
     }
